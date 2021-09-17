@@ -6,5 +6,5 @@ metadata:
   labels:
     app: manhattan
 data: 
-  welcome.message: "Kevyn, BienVenue en DEV MODIFIED"
+  welcome.message: "Test update automatic after cm changes"
 ---
