@@ -5,6 +5,17 @@ metadata:
   namespace: manhattan-dev
 spec:
   tasks:
+     - name: openshift-client
+        params:
+          - name: SCRIPT
+            value: oc rollout restart deployment/manhattan
+          - name: VERSION
+            value: latest
+      runAfter:
+        - push-image
+        taskRef:
+          kind: ClusterTask
+          name: openshift-client
     - name: git-clone
       params:
         - name: url
