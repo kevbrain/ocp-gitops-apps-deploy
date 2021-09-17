@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: new-york
+  namespace: new-york-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: new-york-trigger
