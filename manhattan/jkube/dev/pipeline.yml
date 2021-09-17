@@ -6,11 +6,11 @@ metadata:
 spec:
   tasks:
      - name: openshift-client
-        params:
-          - name: SCRIPT
-            value: oc rollout restart deployment/manhattan
-          - name: VERSION
-            value: latest
+       params:
+         - name: SCRIPT
+           value: oc rollout restart deployment/manhattan
+         - name: VERSION
+           value: latest
       runAfter:
         - push-image
         taskRef:
