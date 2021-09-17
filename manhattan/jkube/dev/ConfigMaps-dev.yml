@@ -6,5 +6,5 @@ metadata:
   labels:
     app: manhattan
 data: 
-  welcome.message: "Kevyn, BienVenue en DEV"
+  welcome.message: "Kevyn, BienVenue en DEV MODIFIED"
 ---
