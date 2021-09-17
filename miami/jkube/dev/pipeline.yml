@@ -5,7 +5,7 @@ metadata:
   namespace: miami-dev
 spec:
   tasks:
-    - name: rollout deploy
+    - name: rollout-deploy
       params:
         - name: SCRIPT
           value: oc rollout restart deployment/miami
