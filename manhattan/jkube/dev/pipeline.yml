@@ -13,9 +13,9 @@ spec:
           value: latest
       runAfter:
         - push-image
-        taskRef:
-          kind: ClusterTask
-          name: openshift-client
+      taskRef:
+        kind: ClusterTask
+        name: openshift-client
     - name: git-clone
       params:
         - name: url
