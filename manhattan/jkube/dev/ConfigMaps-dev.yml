@@ -6,5 +6,5 @@ metadata:
   labels:
     app: manhattan
 data: 
-  welcome.message: "${{welcome.message}}"
+  welcome.message: "Kevyn, BienVenue en DEV"
 ---
