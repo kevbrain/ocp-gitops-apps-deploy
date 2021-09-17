@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  namespace: miami-tst
+  name: miami-route
+  labels:
+    app: miami
+spec:
+  to:
+    kind: Service
+    name: miami-service
+    weight: 256
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
+---

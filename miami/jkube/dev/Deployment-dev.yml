@@ -1,0 +1,59 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  namespace: miami-dev
+  annotations:
+    reloader.stakater.com/auto: "true"
+    build-commit: '@git.commit.id.abbrev@'
+    build-date: "@git.build.time@"
+  name: miami
+  labels:
+    app: miami
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: miami
+  template:
+    metadata:
+      name: miami
+      labels:
+        app: miami
+      annotations:
+        build-commit: '@git.commit.id.abbrev@'
+        build-date: "@git.build.time@"
+    spec:
+      volumes:
+        - name: emptydirlogs
+          emptyDir: {}
+      containers:
+        - name: microservice-pod 
+          resources:
+            requests:
+              memory: 250Mi
+              cpu : 200m
+            limits:
+              memory: 750Mi
+              cpu : 500m
+          readinessProbe:
+            httpGet:
+              path: actuator/health
+              port: 8080
+              scheme: HTTP
+          env:
+            - name: welcome.message
+              valueFrom:
+                configMapKeyRef:
+                  name: miami-cm-0
+                  key: welcome.message
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+              name: http
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: emptydirlogs
+              mountPath: /Logs
+          image: >-
+            image-registry.openshift-image-registry.svc.cluster.local:5000/miami-dev/miami:latest
+      restartPolicy: Always
