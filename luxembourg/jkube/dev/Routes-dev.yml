@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  namespace: luxembourg-dev
+  name: luxembourg-route
+  labels:
+    app: luxembourg
+spec:
+  to:
+    kind: Service
+    name: luxembourg-service
+    weight: 256
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
+---
