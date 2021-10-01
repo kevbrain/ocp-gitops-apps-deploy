@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: luxembourg-trigger
+  namespace: luxembourg-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: luxembourg
+  template:
+    ref: luxembourg
