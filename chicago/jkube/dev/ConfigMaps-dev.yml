@@ -1,0 +1,10 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  namespace: chicago-dev
+  name: chicago-cm-0
+  labels:
+    app: chicago
+data: 
+  welcome.message: "{{welcome.message}}"
+---
