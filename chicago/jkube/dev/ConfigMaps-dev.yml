@@ -6,5 +6,5 @@ metadata:
   labels:
     app: chicago
 data: 
-  welcome.message: "tonton"
+  welcome.message: "{{welcome.message}}"
 ---
