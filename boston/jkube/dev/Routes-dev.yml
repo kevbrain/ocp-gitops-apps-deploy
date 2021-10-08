@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  namespace: boston-dev
+  name: boston-route
+  labels:
+    app: boston
+spec:
+  to:
+    kind: Service
+    name: boston-service
+    weight: 256
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
+---
