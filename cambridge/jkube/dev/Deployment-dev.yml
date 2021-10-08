@@ -41,6 +41,11 @@ spec:
               port: 8080
               scheme: HTTP
           env:
+            - name: welcome.message
+              valueFrom:
+                configMapKeyRef:
+                  name: cambridge-cm-0
+                  key: welcome.message
           ports:
             - containerPort: 8080
               protocol: TCP
