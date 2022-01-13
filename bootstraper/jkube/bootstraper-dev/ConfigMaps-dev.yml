@@ -7,8 +7,8 @@ metadata:
     app: bootstraper
 data: 
   cluster-suffix: "{{cluster-suffix}}"
-  ocp.environment: "{{ocp.environment}}"
-  ocp.replicas: "{{ocp.replicas}}"
+  ocp.environment: "dev"
+  ocp.replicas: '1'
   ocp-cluster.registry: "{{ocp-cluster.registry}}"
   ocp-namespace: "bootstraper-dev"
   path.resource: "/app/resources/template/META-INF/resources"
