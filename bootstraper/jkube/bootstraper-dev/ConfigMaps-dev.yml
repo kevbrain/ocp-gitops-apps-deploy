@@ -6,7 +6,7 @@ metadata:
   labels:
     app: bootstraper
 data: 
-  cluster-suffix: "rose"
+  cluster-suffix: "eliott"
   ocp.environment: "dev"
   ocp.replicas: '1'
   ocp-cluster.registry: "{{ocp-cluster.registry}}"
