@@ -5,8 +5,8 @@ metadata:
   annotations:
     its4u.placeholders/auto: "true"
     reloader.stakater.com/auto: "true"
-    build-commit: '@git.commit.id.abbrev@'
-    build-date: "@git.build.time@"
+    build-commit: "{{git.commit}}"
+    build-date: "{{git.date}}"
   name: test-ksc
   labels:
     app: test-ksc
@@ -21,8 +21,8 @@ spec:
       labels:
         app: test-ksc
       annotations:
-        build-commit: '@git.commit.id.abbrev@'
-        build-date: "@git.build.time@"
+        build-commit: "{{git.commit}}"
+        build-date: "{{git.date}}"
     spec:
       volumes:
         - name: emptydirlogs
@@ -42,6 +42,11 @@ spec:
               port: 8080
               scheme: HTTP
           env:
+            - name: app-name
+              valueFrom:
+                configMapKeyRef:
+                  name: test-ksc-cm-0
+                  key: app-name
             - name: cluster-suffix
               valueFrom:
                 configMapKeyRef:
@@ -81,5 +86,5 @@ spec:
             - name: emptydirlogs
               mountPath: /Logs
           image: >-
-            image-registry.openshift-image-registry.svc.cluster.local:5000/test-ksc-dev/test-ksc:latest
+            image-registry.openshift-image-registry.svc.cluster.local:5000/test-ksc-dev/test-ksc:0.0.1-SNAPSHOT
       restartPolicy: Always
