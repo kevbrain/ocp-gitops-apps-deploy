@@ -100,8 +100,8 @@ spec:
           volumeMounts:
             - name: emptydirlogs
               mountPath: /Logs
-            - name: git-workspaces
+            - name: git-workspace
               mountPath: /git-workspace
           image: >-
-            {{ocp-cluster.registry}}/{{ocp-namespace}}/placeholdermanager:{{app-version}}
+            image-registry.openshift-image-registry.svc.cluster.local:5000/placeholdermanager-dev/placeholdermanager:0.0.1-SNAPSHOT
       restartPolicy: Always
