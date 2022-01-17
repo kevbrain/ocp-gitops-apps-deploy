@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: test-new-trigger
+  namespace: test-new-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: test-new
+  template:
+    ref: test-new
