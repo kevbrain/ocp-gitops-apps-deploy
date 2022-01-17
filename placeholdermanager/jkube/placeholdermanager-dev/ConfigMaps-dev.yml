@@ -12,5 +12,5 @@ data:
   ocp-cluster.registry: "image-registry.openshift-image-registry.svc.cluster.local:5000"
   ocp-namespace: "placeholdermanager-dev"
   app-name: "OCP - GitOps Application Deployer v2"
-  git-user: "openshift" 
+  git.user: "openshift" 
 ---
