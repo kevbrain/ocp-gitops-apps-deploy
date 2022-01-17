@@ -5,13 +5,11 @@ metadata:
   annotations:
     its4u.placeholders/auto: "true"
     reloader.stakater.com/auto: "true"
-    build-commit: "{{git.commit}}"
-    build-date: "{{git.date}}"
   name: test-ksc
   labels:
     app: test-ksc
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: test-ksc
@@ -20,9 +18,6 @@ spec:
       name: test-ksc
       labels:
         app: test-ksc
-      annotations:
-        build-commit: "{{git.commit}}"
-        build-date: "{{git.date}}"
     spec:
       volumes:
         - name: emptydirlogs
