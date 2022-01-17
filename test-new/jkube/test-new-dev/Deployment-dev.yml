@@ -81,5 +81,5 @@ spec:
             - name: emptydirlogs
               mountPath: /Logs
           image: >-
-            image-registry.openshift-image-registry.svc.cluster.local:5000/test-new-dev/test-ksc:0.0.1-SNAPSHOT
+            image-registry.openshift-image-registry.svc.cluster.local:5000/test-new-dev/test-new:0.0.1-SNAPSHOT
       restartPolicy: Always
