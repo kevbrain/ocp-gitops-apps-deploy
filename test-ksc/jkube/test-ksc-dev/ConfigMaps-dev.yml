@@ -12,4 +12,5 @@ data:
   ocp-cluster.registry: "image-registry.openshift-image-registry.svc.cluster.local:5000"
   ocp-namespace: "test-ksc-dev"
   app-name: "My Application"
+  git-user: "openshift"
 ---
