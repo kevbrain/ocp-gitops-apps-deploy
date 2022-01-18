@@ -6,15 +6,16 @@ metadata:
   labels:
     app: bootstraper
 data: 
-  cluster-suffix: "maya"
+  cluster-suffix: "apps.ocp-lab.its4u.eu"
   ocp.environment: "dev"
-  ocp.replicas: '1'
-  ocp-cluster.registry: "{{ocp-cluster.registry}}"
+  ocp.replicas: "1"
+  ocp-cluster.registry: "image-registry.openshift-image-registry.svc.cluster.local:5000"
   ocp-namespace: "bootstraper-dev"
   path.resource: "/app/resources/template/META-INF/resources"
   path.template: "/app/resources/template/"
   path.workspace: "/tmp"
   placeholdermanager.url: "https://placeholdermanager-route-placeholdermanager-dev.apps.ocp-lab.its4u.eu/"
   server.port: '8080'
-  spring.application.name: "{{spring.application.name}}"
+  spring.application.name: "OCP - GitOps Application Bootstrapper"
+  argo.user: "admin"
 ---
