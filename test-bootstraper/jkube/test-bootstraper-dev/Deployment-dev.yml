@@ -9,7 +9,7 @@ metadata:
   labels:
     app: test-bootstraper
 spec:
-  replicas: {{ocp.replicas}}
+  replicas: 1
   selector:
     matchLabels:
       app: test-bootstraper
@@ -81,5 +81,5 @@ spec:
             - name: emptydirlogs
               mountPath: /Logs
           image: >-
-            {{ocp-cluster.registry}}/{{ocp-namespace}}/test-ksc:{{app-version}}
+            image-registry.openshift-image-registry.svc.cluster.local:5000/test-bootstraper-dev/test-ksc:0.0.1-SNAPSHOT
       restartPolicy: Always
