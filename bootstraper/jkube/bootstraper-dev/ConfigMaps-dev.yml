@@ -18,4 +18,5 @@ data:
   server.port: '8080'
   spring.application.name: "OCP - GitOps Application Bootstrapper v1.0"
   argo.user: "admin"
+  git.user: "openshift"
 ---
