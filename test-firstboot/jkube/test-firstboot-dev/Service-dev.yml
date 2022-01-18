@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: test-firstboot-dev
+  name: test-firstboot-service
+  labels:
+    app: test-firstboot
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: test-firstboot
