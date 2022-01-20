@@ -9,7 +9,7 @@ metadata:
   labels:
     app: test-toto
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: test-toto
