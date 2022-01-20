@@ -16,7 +16,7 @@ data:
   path.workspace: "/tmp"
   placeholdermanager.url: "https://placeholdermanager-route-placeholdermanager-dev.apps.ocp-lab.its4u.eu/"
   server.port: '8080'
-  spring.application.name: "OCP - GitOps Application Bootstrapper v1.3"
+  spring.application.name: "OCP - GitOps Application Bootstrapper v1.0"
   argo.user: "admin"
   git.user: "openshift"
   argo.server: "https://openshift-gitops-server-openshift-gitops.apps.ocp-lab.its4u.eu"
