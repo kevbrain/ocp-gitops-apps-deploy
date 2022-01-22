@@ -9,7 +9,7 @@ metadata:
   labels:
     app: test-eliott
 spec:
-  replicas: {{ocp.replicas}}
+  replicas: 1
   selector:
     matchLabels:
       app: test-eliott
@@ -81,5 +81,5 @@ spec:
             - name: emptydirlogs
               mountPath: /Logs
           image: >-
-            {{ocp-cluster.registry}}/{{ocp-namespace}}/test-eliott:{{app-version}}
+            image-registry.openshift-image-registry.svc.cluster.local:5000/test-eliott-dev/test-eliott:0.0.1-SNAPSHOT
       restartPolicy: Always
