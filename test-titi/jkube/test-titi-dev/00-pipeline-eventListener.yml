@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: test-titi
+  namespace: test-titi-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: test-titi-trigger
