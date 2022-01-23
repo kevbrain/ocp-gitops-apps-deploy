@@ -1,0 +1,85 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  namespace: test-rose-dev
+  annotations:
+    its4u.placeholders/auto: "true"
+    reloader.stakater.com/auto: "true"
+  name: test-rose
+  labels:
+    app: test-rose
+spec:
+  replicas: {{ocp.replicas}}
+  selector:
+    matchLabels:
+      app: test-rose
+  template:
+    metadata:
+      name: test-rose
+      labels:
+        app: test-rose
+    spec:
+      volumes:
+        - name: emptydirlogs
+          emptyDir: {}
+      containers:
+        - name: microservice-pod 
+          resources:
+            requests:
+              memory: 250Mi
+              cpu : 200m
+            limits:
+              memory: 750Mi
+              cpu : 500m
+          readinessProbe:
+            httpGet:
+              path: actuator/health
+              port: 8080
+              scheme: HTTP
+          env:
+            - name: app-version
+              valueFrom:
+                configMapKeyRef:
+                  name: test-rose-cm-0
+                  key: app-version
+            - name: cluster-suffix
+              valueFrom:
+                configMapKeyRef:
+                  name: test-rose-cm-0
+                  key: cluster-suffix
+            - name: ocp.environment
+              valueFrom:
+                configMapKeyRef:
+                  name: test-rose-cm-0
+                  key: ocp.environment
+            - name: ocp.replicas
+              valueFrom:
+                configMapKeyRef:
+                  name: test-rose-cm-0
+                  key: ocp.replicas
+            - name: ocp-cluster.registry
+              valueFrom:
+                configMapKeyRef:
+                  name: test-rose-cm-0
+                  key: ocp-cluster.registry
+            - name: ocp-namespace
+              valueFrom:
+                configMapKeyRef:
+                  name: test-rose-cm-0
+                  key: ocp-namespace
+            - name: actuator.password
+              valueFrom:
+                secretKeyRef:
+                  name: test-rose-secret-0
+                  key: actuator.password
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+              name: http
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: emptydirlogs
+              mountPath: /Logs
+          image: >-
+            {{ocp-cluster.registry}}/{{ocp-namespace}}/test-rose:{{app-version}}
+      restartPolicy: Always
