@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: test-maya
+  namespace: test-maya-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: test-maya-trigger
