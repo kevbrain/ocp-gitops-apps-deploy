@@ -9,7 +9,7 @@ metadata:
   labels:
     app: test-rene
 spec:
-  replicas: {{ocp.replicas}}
+  replicas: 1
   selector:
     matchLabels:
       app: test-rene
@@ -81,5 +81,5 @@ spec:
             - name: emptydirlogs
               mountPath: /Logs
           image: >-
-            {{ocp-cluster.registry}}/{{ocp-namespace}}/test-rene:{{app-version}}
+            image-registry.openshift-image-registry.svc.cluster.local:5000/test-rene-dev/test-rene:0.0.1-SNAPSHOT
       restartPolicy: Always
