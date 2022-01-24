@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  namespace: test-rene-dev
+  name: test-rene-route
+  labels:
+    app: test-rene
+spec:
+  to:
+    kind: Service
+    name: test-rene-service
+    weight: 256
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
+---
