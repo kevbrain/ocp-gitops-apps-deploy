@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: visioner-trigger
+  namespace: visioner-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: visioner
+  template:
+    ref: visioner
