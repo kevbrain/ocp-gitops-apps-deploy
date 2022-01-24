@@ -1,9 +1,0 @@
-apiVersion: triggers.tekton.dev/v1alpha1
-kind: EventListener
-metadata:
-  name: test-rose
-  namespace: test-rose-dev
-spec:
-  serviceAccountName: pipeline
-  triggers:
-    - triggerRef: test-rose-trigger

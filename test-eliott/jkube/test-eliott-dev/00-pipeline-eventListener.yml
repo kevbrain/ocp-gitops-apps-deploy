@@ -1,9 +1,0 @@
-apiVersion: triggers.tekton.dev/v1alpha1
-kind: EventListener
-metadata:
-  name: test-eliott
-  namespace: test-eliott-dev
-spec:
-  serviceAccountName: pipeline
-  triggers:
-    - triggerRef: test-eliott-trigger

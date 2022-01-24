@@ -1,9 +1,0 @@
-apiVersion: triggers.tekton.dev/v1alpha1
-kind: EventListener
-metadata:
-  name: chicago
-  namespace: chicago-dev
-spec:
-  serviceAccountName: pipeline
-  triggers:
-    - triggerRef: chicago-trigger

@@ -1,9 +1,0 @@
-apiVersion: triggers.tekton.dev/v1alpha1
-kind: EventListener
-metadata:
-  name: test-new
-  namespace: test-new-dev
-spec:
-  serviceAccountName: pipeline
-  triggers:
-    - triggerRef: test-new-trigger

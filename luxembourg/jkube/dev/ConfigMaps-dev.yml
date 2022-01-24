@@ -1,9 +1,0 @@
-kind: ConfigMap
-apiVersion: v1
-metadata:
-  namespace: luxembourg-dev
-  name: luxembourg-cm-0
-  labels:
-    app: luxembourg
-data:  {} 
----

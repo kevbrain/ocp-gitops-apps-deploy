@@ -1,9 +1,0 @@
-apiVersion: triggers.tekton.dev/v1alpha1
-kind: EventListener
-metadata:
-  name: test-toto
-  namespace: test-toto-dev
-spec:
-  serviceAccountName: pipeline
-  triggers:
-    - triggerRef: test-toto-trigger
