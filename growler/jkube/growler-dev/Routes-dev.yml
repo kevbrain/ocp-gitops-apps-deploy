@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  namespace: growler-dev
+  name: growler-route
+  labels:
+    app: growler
+spec:
+  to:
+    kind: Service
+    name: growler-service
+    weight: 256
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
+---
