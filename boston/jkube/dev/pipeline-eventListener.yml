@@ -1,9 +1,0 @@
-apiVersion: triggers.tekton.dev/v1alpha1
-kind: EventListener
-metadata:
-  name: boston
-  namespace: boston-dev
-spec:
-  serviceAccountName: pipeline
-  triggers:
-    - triggerRef: boston-trigger
