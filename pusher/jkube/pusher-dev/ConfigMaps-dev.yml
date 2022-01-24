@@ -10,6 +10,6 @@ data:
   ocp.environment: "dev"
   ocp-namespace: "pusher-dev"
   cluster-suffix: "apps.ocp-lab.its4u.eu"
-  ocp.replicas: "1"
+  ocp.replicas: "2"
   app-version: "0.0.1-SNAPSHOT"
 ---
