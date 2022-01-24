@@ -1,9 +1,0 @@
-apiVersion: triggers.tekton.dev/v1alpha1
-kind: EventListener
-metadata:
-  name: bmw
-  namespace: bmw-dev
-spec:
-  serviceAccountName: pipeline
-  triggers:
-    - triggerRef: bmw-trigger

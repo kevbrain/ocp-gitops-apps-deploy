@@ -1,9 +1,0 @@
-apiVersion: triggers.tekton.dev/v1alpha1
-kind: EventListener
-metadata:
-  name: ford
-  namespace: ford-dev
-spec:
-  serviceAccountName: pipeline
-  triggers:
-    - triggerRef: ford-trigger
