@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: importer
+  namespace: importer-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: importer-trigger

@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  namespace: importer-dev
+  name: importer-route
+  labels:
+    app: importer
+spec:
+  to:
+    kind: Service
+    name: importer-service
+    weight: 256
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
+---
