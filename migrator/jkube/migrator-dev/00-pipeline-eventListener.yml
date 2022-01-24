@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: migrator
+  namespace: migrator-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: migrator-trigger
