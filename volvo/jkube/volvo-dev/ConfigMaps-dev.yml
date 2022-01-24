@@ -1,0 +1,15 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  namespace: volvo-dev
+  name: volvo-cm-0
+  labels:
+    app: volvo
+data: 
+  app-version: "{{app-version}}"
+  cluster-suffix: "{{cluster-suffix}}"
+  ocp.environment: "{{ocp.environment}}"
+  ocp.replicas: "{{ocp.replicas}}"
+  ocp-cluster.registry: "{{ocp-cluster.registry}}"
+  ocp-namespace: "{{ocp-namespace}}"
+---

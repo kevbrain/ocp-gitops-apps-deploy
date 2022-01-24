@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  namespace: volvo-dev
+  name: volvo-route
+  labels:
+    app: volvo
+spec:
+  to:
+    kind: Service
+    name: volvo-service
+    weight: 256
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
+---
