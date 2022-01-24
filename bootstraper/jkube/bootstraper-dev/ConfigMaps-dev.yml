@@ -20,4 +20,8 @@ data:
   argo.user: "admin"
   git.user: "openshift"
   argo.server: "https://openshift-gitops-server-openshift-gitops.apps.ocp-lab.its4u.eu"
+  codeready.user: "kevyn"
+  codeready.client.id: "postman"
+  codeready.access.token.url: "https://keycloak-openshift-workspaces.apps.ocp-lab.its4u.eu/auth/realms/codeready/protocol/openid-connect/token"
+  codeready.workspace.url: "https://codeready-openshift-workspaces.apps.ocp-lab.its4u.eu"
 ---
