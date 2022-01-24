@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: pusher
+  namespace: pusher-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: pusher-trigger
