@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: cambridge
+  namespace: cambridge-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: cambridge-trigger
