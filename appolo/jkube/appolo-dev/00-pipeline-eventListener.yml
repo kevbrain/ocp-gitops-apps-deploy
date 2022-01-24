@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: appolo
+  namespace: appolo-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: appolo-trigger

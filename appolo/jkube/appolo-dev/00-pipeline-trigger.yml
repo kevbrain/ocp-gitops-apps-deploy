@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: appolo-trigger
+  namespace: appolo-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: appolo
+  template:
+    ref: appolo
