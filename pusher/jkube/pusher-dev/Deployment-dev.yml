@@ -9,7 +9,7 @@ metadata:
   labels:
     app: pusher
 spec:
-  replicas: {{ocp.replicas}}
+  replicas: 1
   selector:
     matchLabels:
       app: pusher
@@ -81,5 +81,5 @@ spec:
             - name: emptydirlogs
               mountPath: /Logs
           image: >-
-            {{ocp-cluster.registry}}/{{ocp-namespace}}/pusher:{{app-version}}
+            image-registry.openshift-image-registry.svc.cluster.local:5000/pusher-dev/pusher:0.0.1-SNAPSHOT
       restartPolicy: Always
