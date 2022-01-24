@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  namespace: citroen-dev
+  name: citroen-route
+  labels:
+    app: citroen
+spec:
+  to:
+    kind: Service
+    name: citroen-service
+    weight: 256
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
+---
