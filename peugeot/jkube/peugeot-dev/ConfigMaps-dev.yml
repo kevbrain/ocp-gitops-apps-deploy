@@ -6,10 +6,10 @@ metadata:
   labels:
     app: peugeot
 data: 
-  app-version: "{{app-version}}"
-  cluster-suffix: "{{cluster-suffix}}"
-  ocp.environment: "{{ocp.environment}}"
-  ocp.replicas: "{{ocp.replicas}}"
-  ocp-cluster.registry: "{{ocp-cluster.registry}}"
-  ocp-namespace: "{{ocp-namespace}}"
+  app-version: "0.0.1-SNAPSHOT"
+  cluster-suffix: "apps.ocp-lab.its4u.eu"
+  ocp.environment: "dev"
+  ocp.replicas: "1"
+  ocp-cluster.registry: "image-registry.openshift-image-registry.svc.cluster.local:5000"
+  ocp-namespace: "peugeot-dev"
 ---
