@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: dacia
+  namespace: dacia-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: dacia-trigger
