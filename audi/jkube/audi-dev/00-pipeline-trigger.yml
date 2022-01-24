@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: audi-trigger
+  namespace: audi-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: audi
+  template:
+    ref: audi

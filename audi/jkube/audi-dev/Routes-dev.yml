@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  namespace: audi-dev
+  name: audi-route
+  labels:
+    app: audi
+spec:
+  to:
+    kind: Service
+    name: audi-service
+    weight: 256
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
+---
