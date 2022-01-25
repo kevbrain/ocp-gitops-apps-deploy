@@ -12,4 +12,5 @@ data:
   cluster-suffix: "apps.ocp-lab.its4u.eu"
   ocp.replicas: "1"
   app-version: "0.0.1-SNAPSHOT"
+  app-name: "OCP - GitOps Importer"
 ---
