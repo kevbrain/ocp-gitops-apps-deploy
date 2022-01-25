@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  namespace: multi-env-dev
+  name: multi-env-route
+  labels:
+    app: multi-env
+spec:
+  to:
+    kind: Service
+    name: multi-env-service
+    weight: 256
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
+---
