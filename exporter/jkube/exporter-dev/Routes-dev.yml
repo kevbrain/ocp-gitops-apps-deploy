@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  namespace: exporter-dev
+  name: exporter-route
+  labels:
+    app: exporter
+spec:
+  to:
+    kind: Service
+    name: exporter-service
+    weight: 256
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
+---
