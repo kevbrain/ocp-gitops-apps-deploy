@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: exporter-trigger
+  namespace: exporter-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: exporter
+  template:
+    ref: exporter
