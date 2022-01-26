@@ -6,10 +6,10 @@ metadata:
   labels:
     app: netscape
 data: 
-  ocp-cluster.registry: "{{ocp-cluster.registry}}"
-  ocp.environment: "{{ocp.environment}}"
-  ocp-namespace: "{{ocp-namespace}}"
-  cluster-suffix: "{{cluster-suffix}}"
-  ocp.replicas: "{{ocp.replicas}}"
-  app-version: "{{app-version}}"
+  ocp-cluster.registry: "image-registry.openshift-image-registry.svc.cluster.local:5000"
+  ocp.environment: "dev"
+  ocp-namespace: "netscape-dev"
+  cluster-suffix: "apps.ocp-lab.its4u.eu"
+  ocp.replicas: "1"
+  app-version: "0.0.1-SNAPSHOT"
 ---
