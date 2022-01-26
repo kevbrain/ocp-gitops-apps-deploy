@@ -1,0 +1,15 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  namespace: devops4u-dev
+  name: devops4u-cm-0
+  labels:
+    app: devops4u
+data: 
+  ocp-cluster.registry: "{{ocp-cluster.registry}}"
+  ocp.environment: "{{ocp.environment}}"
+  ocp-namespace: "{{ocp-namespace}}"
+  cluster-suffix: "{{cluster-suffix}}"
+  ocp.replicas: "{{ocp.replicas}}"
+  app-version: "{{app-version}}"
+---

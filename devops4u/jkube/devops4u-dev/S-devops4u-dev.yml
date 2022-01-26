@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: devops4u-dev
+  name: devops4u-secret-0
+  labels:
+    app: devops4u    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 
