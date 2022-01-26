@@ -1,0 +1,15 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  namespace: netscape-dev
+  name: netscape-cm-0
+  labels:
+    app: netscape
+data: 
+  ocp-cluster.registry: "{{ocp-cluster.registry}}"
+  ocp.environment: "{{ocp.environment}}"
+  ocp-namespace: "{{ocp-namespace}}"
+  cluster-suffix: "{{cluster-suffix}}"
+  ocp.replicas: "{{ocp.replicas}}"
+  app-version: "{{app-version}}"
+---
