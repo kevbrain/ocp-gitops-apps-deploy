@@ -2,7 +2,7 @@ apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: fortrash-pipeline
-  namespace: {{ocp-namespace}}
+  namespace: fortrash-dev
 spec:
   tasks:
     - name: rollout-deploy

@@ -1,12 +1,12 @@
 kind: Secret
 apiVersion: v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: fortrash-dev
   name: fortrash-secret-0
   labels:
     app: fortrash    
 stringData:  
-  actuator.password: {{actuator.password}}
+  actuator.password: password
 type: Opaque
 ---
  

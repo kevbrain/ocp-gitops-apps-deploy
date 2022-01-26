@@ -2,7 +2,7 @@ apiVersion: triggers.tekton.dev/v1alpha1
 kind: EventListener
 metadata:
   name: fortrash
-  namespace: {{ocp-namespace}}
+  namespace: fortrash-dev
 spec:
   serviceAccountName: pipeline
   triggers:

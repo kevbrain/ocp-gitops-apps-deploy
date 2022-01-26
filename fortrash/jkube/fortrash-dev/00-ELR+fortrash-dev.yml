@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/part-of: Triggers
     eventlistener: fortrash
   name: el-fortrash
-  namespace: {{ocp-namespace}}
+  namespace: fortrash-dev
 spec:
   host: el-fortrash-fortrash-dev.apps.ocp-lab.its4u.eu
   port:

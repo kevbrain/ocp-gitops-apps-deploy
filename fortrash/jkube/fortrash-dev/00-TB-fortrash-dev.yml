@@ -2,7 +2,7 @@ apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
 metadata:
   name: fortrash
-  namespace: {{ocp-namespace}}
+  namespace: fortrash-dev
 spec:
   params:
     - name: git-repo-url

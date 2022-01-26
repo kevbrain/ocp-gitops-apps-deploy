@@ -1,7 +1,7 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: fortrash-dev
   annotations:
     its4u.placeholders/auto: "true"
     reloader.stakater.com/auto: "true"
@@ -9,7 +9,7 @@ metadata:
   labels:
     app: fortrash
 spec:
-  replicas: {{ocp.replicas}}
+  replicas: 1
   selector:
     matchLabels:
       app: fortrash
@@ -81,5 +81,5 @@ spec:
             - name: emptydirlogs
               mountPath: /Logs
           image: >-
-            {{ocp-cluster.registry}}/{{ocp-namespace}}/fortrash:{{app-version}}
+            image-registry.openshift-image-registry.svc.cluster.local:5000/fortrash-dev/fortrash:0.0.1-SNAPSHOT
       restartPolicy: Always
