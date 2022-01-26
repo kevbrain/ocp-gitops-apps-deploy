@@ -9,7 +9,7 @@ metadata:
   labels:
     app: devops4u
 spec:
-  replicas: {{ocp.replicas}}
+  replicas: 1
   selector:
     matchLabels:
       app: devops4u
@@ -81,5 +81,5 @@ spec:
             - name: emptydirlogs
               mountPath: /Logs
           image: >-
-            {{ocp-cluster.registry}}/{{ocp-namespace}}/devops4u:{{app-version}}
+            image-registry.openshift-image-registry.svc.cluster.local:5000/devops4u-dev/devops4u:0.0.1-SNAPSHOT
       restartPolicy: Always
