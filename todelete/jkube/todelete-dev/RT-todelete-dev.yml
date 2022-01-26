@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  namespace: todelete-dev
+  name: todelete-route
+  labels:
+    app: todelete
+spec:
+  to:
+    kind: Service
+    name: todelete-service
+    weight: 256
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
+---

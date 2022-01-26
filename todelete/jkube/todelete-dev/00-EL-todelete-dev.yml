@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: todelete
+  namespace: todelete-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: todelete-trigger

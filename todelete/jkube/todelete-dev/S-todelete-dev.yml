@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: todelete-dev
+  name: todelete-secret-0
+  labels:
+    app: todelete    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 
