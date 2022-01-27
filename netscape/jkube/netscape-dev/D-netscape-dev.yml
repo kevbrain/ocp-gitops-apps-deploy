@@ -1,7 +1,7 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  namespace: netscape-dev
+  namespace: devops
   annotations:
     its4u.placeholders/auto: "true"
     reloader.stakater.com/auto: "true"
@@ -81,5 +81,5 @@ spec:
             - name: emptydirlogs
               mountPath: /Logs
           image: >-
-            image-registry.openshift-image-registry.svc.cluster.local:5000/netscape-dev/netscape:0.0.1-SNAPSHOT
+            image-registry.openshift-image-registry.svc.cluster.local:5000/devops/netscape:0.0.1-SNAPSHOT
       restartPolicy: Always

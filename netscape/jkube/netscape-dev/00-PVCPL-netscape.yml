@@ -2,7 +2,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: netscape-pipeline-claim
-  namespace: netscape-dev
+  namespace: devops
 spec:
   accessModes:
     - ReadWriteOnce

@@ -2,7 +2,7 @@ apiVersion: triggers.tekton.dev/v1alpha1
 kind: Trigger
 metadata:
   name: netscape-trigger
-  namespace: netscape-dev
+  namespace: devops
 spec:
   serviceAccountName: pipeline
   bindings:

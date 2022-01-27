@@ -2,7 +2,7 @@ apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: netscape-pipeline
-  namespace: netscape-dev
+  namespace: devops
 spec:
   tasks:
     - name: rollout-deploy
