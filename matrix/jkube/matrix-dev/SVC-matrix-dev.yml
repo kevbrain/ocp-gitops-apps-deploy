@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: devops
   name: matrix-service
   labels:
     app: matrix

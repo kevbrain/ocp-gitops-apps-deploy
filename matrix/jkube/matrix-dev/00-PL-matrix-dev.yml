@@ -2,7 +2,7 @@ apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: matrix-pipeline
-  namespace: {{ocp-namespace}}
+  namespace: devops
 spec:
   tasks:
     - name: rollout-deploy

@@ -2,7 +2,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: matrix-pipeline-claim
-  namespace: {{ocp-namespace}}
+  namespace: devops
 spec:
   accessModes:
     - ReadWriteOnce

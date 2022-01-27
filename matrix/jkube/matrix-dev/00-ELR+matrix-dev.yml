@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/part-of: Triggers
     eventlistener: matrix
   name: el-matrix
-  namespace: {{ocp-namespace}}
+  namespace: devops
 spec:
   host: el-matrix-devops.apps.ocp-lab.its4u.eu
   port:
