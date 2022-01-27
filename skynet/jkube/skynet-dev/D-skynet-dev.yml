@@ -106,5 +106,5 @@ spec:
             - name: emptydirlogs
               mountPath: /Logs
           image: >-
-            image-registry.openshift-image-registry.svc.cluster.local:5000/devops/skynet:0.0.1-SNAPSHOT
+            image-registry.openshift-image-registry.svc.cluster.local:5000/devops/skynet:1.0.0-RELEASE
       restartPolicy: Always
