@@ -2,7 +2,7 @@ apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerTemplate
 metadata:
   name: skynet
-  namespace: {{ocp-namespace}}
+  namespace: devops
 spec:
   params:
   - name: git-repo-url
