@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: netscape-dev
   name: netscape-service
   labels:
     app: netscape

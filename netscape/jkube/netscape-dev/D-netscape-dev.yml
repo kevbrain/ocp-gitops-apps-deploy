@@ -1,7 +1,7 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: netscape-dev
   annotations:
     its4u.placeholders/auto: "true"
     reloader.stakater.com/auto: "true"
@@ -9,7 +9,7 @@ metadata:
   labels:
     app: netscape
 spec:
-  replicas: {{ocp.replicas}}
+  replicas: 1
   selector:
     matchLabels:
       app: netscape
@@ -81,5 +81,5 @@ spec:
             - name: emptydirlogs
               mountPath: /Logs
           image: >-
-            {{ocp-cluster.registry}}/{{ocp-namespace}}/netscape:{{app-version}}
+            image-registry.openshift-image-registry.svc.cluster.local:5000/netscape-dev/netscape:0.0.1-SNAPSHOT
       restartPolicy: Always

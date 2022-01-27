@@ -2,7 +2,7 @@ apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
 metadata:
   name: netscape
-  namespace: {{ocp-namespace}}
+  namespace: netscape-dev
 spec:
   params:
     - name: git-repo-url

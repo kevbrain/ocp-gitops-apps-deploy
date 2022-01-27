@@ -2,7 +2,7 @@ apiVersion: triggers.tekton.dev/v1alpha1
 kind: EventListener
 metadata:
   name: netscape
-  namespace: {{ocp-namespace}}
+  namespace: netscape-dev
 spec:
   serviceAccountName: pipeline
   triggers:
