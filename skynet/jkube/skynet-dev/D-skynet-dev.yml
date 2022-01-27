@@ -37,11 +37,6 @@ spec:
               port: 8080
               scheme: HTTP
           env:
-            - name: app-request.memory?
-              valueFrom:
-                configMapKeyRef:
-                  name: skynet-cm-0
-                  key: app-request.memory?
             - name: app-limit.memory
               valueFrom:
                 configMapKeyRef:

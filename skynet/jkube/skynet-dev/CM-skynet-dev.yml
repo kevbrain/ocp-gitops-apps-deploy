@@ -6,7 +6,6 @@ metadata:
   labels:
     app: skynet
 data: 
-  app-request.memory?: "{{app-request.memory?}}"
   app-limit.memory: "750Mi"
   ocp-cluster.registry: "image-registry.openshift-image-registry.svc.cluster.local:5000"
   app-limit.cpu: "500m"
