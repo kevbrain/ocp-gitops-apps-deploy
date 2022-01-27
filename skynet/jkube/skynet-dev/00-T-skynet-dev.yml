@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: skynet-trigger
+  namespace: {{ocp-namespace}}
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: skynet
+  template:
+    ref: skynet
