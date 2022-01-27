@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: matrix
+  namespace: {{ocp-namespace}}
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: matrix-trigger

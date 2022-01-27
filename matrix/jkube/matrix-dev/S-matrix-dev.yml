@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: matrix-secret-0
+  labels:
+    app: matrix    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 
