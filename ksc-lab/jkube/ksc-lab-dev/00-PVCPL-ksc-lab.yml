@@ -2,7 +2,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: ksc-lab-pipeline-claim
-  namespace: {{ocp-namespace}}
+  namespace: ksc-lab-dev
 spec:
   accessModes:
     - ReadWriteOnce

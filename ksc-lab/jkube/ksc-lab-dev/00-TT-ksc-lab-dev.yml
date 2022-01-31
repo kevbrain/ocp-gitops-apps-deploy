@@ -2,7 +2,7 @@ apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerTemplate
 metadata:
   name: ksc-lab
-  namespace: {{ocp-namespace}}
+  namespace: ksc-lab-dev
 spec:
   params:
   - name: git-repo-url

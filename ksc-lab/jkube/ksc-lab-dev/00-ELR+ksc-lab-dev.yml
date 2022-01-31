@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/part-of: Triggers
     eventlistener: ksc-lab
   name: el-ksc-lab
-  namespace: {{ocp-namespace}}
+  namespace: ksc-lab-dev
 spec:
   host: el-ksc-lab-ksc-lab-dev.apps.ocp-lab.its4u.eu
   port:

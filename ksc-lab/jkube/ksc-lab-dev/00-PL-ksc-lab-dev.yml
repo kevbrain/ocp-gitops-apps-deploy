@@ -2,7 +2,7 @@ apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: ksc-lab-pipeline
-  namespace: {{ocp-namespace}}
+  namespace: ksc-lab-dev
 spec:
   tasks:
     - name: rollout-deploy

@@ -1,12 +1,12 @@
 kind: Secret
 apiVersion: v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: ksc-lab-dev
   name: ksc-lab-secret-0
   labels:
     app: ksc-lab    
 stringData:  
-  actuator.password: {{actuator.password}}
+  actuator.password: password
 type: Opaque
 ---
  
