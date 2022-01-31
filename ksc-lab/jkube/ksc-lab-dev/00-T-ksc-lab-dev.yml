@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: ksc-lab-trigger
+  namespace: {{ocp-namespace}}
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: ksc-lab
+  template:
+    ref: ksc-lab

@@ -1,0 +1,33 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerTemplate
+metadata:
+  name: ksc-lab
+  namespace: {{ocp-namespace}}
+spec:
+  params:
+  - name: git-repo-url
+    description: The git repository url
+  - name: git-revision
+    description: The git revision
+    default: pipelines-1.4
+  - name: git-repo-name
+    description: The name of the deployment to be created / patched
+  resourcetemplates:
+  - apiVersion: tekton.dev/v1beta1
+    kind: PipelineRun
+    metadata:
+      generateName: build-deploy-$(tt.params.git-repo-name)-
+      namespace: ksc-lab-dev
+      generation: 1
+    spec:
+      pipelineRef:
+        name: ksc-lab-pipeline
+      serviceAccountName: pipeline
+      timeout: 1h0m0s
+      workspaces:
+        - name: source
+          persistentVolumeClaim:
+            claimName: ksc-lab-pipeline-claim
+        - configMap:
+            name: maven-settings-cm
+          name: maven-settings
