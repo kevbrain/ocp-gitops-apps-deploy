@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: lab-devops-service
+  labels:
+    app: lab-devops
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: lab-devops
