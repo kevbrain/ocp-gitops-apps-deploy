@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: ksc-sandbox-service
+  labels:
+    app: ksc-sandbox
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: ksc-sandbox

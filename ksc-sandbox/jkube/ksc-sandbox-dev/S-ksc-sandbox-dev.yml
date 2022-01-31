@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: ksc-sandbox-secret-0
+  labels:
+    app: ksc-sandbox    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 
