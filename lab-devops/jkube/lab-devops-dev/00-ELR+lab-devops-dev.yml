@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/part-of: Triggers
     eventlistener: lab-devops
   name: el-lab-devops-dev-route
-  namespace: {{ocp-namespace}}
+  namespace: lab-devops-dev
 spec:
   host: el-lab-devops-dev.apps.ocp-lab.its4u.eu
   port:

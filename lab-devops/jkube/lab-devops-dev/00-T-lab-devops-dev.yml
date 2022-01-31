@@ -2,7 +2,7 @@ apiVersion: triggers.tekton.dev/v1alpha1
 kind: Trigger
 metadata:
   name: lab-devops-dev-trigger
-  namespace: {{ocp-namespace}}
+  namespace: lab-devops-dev
 spec:
   serviceAccountName: pipeline
   bindings:

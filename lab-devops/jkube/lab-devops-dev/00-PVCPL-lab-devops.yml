@@ -2,7 +2,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: lab-devops-dev-pipeline-claim
-  namespace: {{ocp-namespace}}
+  namespace: lab-devops-dev
 spec:
   accessModes:
     - ReadWriteOnce

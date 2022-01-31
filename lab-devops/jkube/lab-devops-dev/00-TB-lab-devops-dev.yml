@@ -2,7 +2,7 @@ apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
 metadata:
   name: lab-devops-dev-triggerBinging
-  namespace: {{ocp-namespace}}
+  namespace: lab-devops-dev
 spec:
   params:
     - name: git-repo-url

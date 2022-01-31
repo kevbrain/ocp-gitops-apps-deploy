@@ -1,8 +1,8 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: {{ocp-namespace}}-pipeline-build
-  namespace: {{ocp-namespace}}
+  name: lab-devops-dev-pipeline-build
+  namespace: lab-devops-dev
 spec:
   params:
     - name: git-repo-name
