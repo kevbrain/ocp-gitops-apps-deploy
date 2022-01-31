@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: exporter-secret-0
+  labels:
+    app: exporter    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 
