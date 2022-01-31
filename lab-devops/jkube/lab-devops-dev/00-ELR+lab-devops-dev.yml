@@ -13,6 +13,6 @@ spec:
     targetPort: http-listener
   to:
     kind: Service
-    name: el-lab-devops-dev-EventListener
+    name: el-lab-devops-dev-eventlistener
     weight: 100
   wildcardPolicy: None

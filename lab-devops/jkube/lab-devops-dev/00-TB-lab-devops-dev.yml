@@ -1,7 +1,7 @@
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
 metadata:
-  name: lab-devops-dev-triggerBinging
+  name: lab-devops-dev-triggerbinging
   namespace: lab-devops-dev
 spec:
   params:

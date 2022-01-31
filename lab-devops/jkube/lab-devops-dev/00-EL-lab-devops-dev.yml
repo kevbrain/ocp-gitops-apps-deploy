@@ -1,7 +1,7 @@
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: EventListener
 metadata:
-  name: lab-devops-dev-EventListener
+  name: lab-devops-dev-eventlistener
   namespace: lab-devops-dev
 spec:
   serviceAccountName: pipeline

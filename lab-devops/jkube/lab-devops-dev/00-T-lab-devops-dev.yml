@@ -6,6 +6,6 @@ metadata:
 spec:
   serviceAccountName: pipeline
   bindings:
-    - ref: lab-devops-dev-triggerBinging
+    - ref: lab-devops-dev-triggerbinding
   template:
-    ref: lab-devops-dev-triggerTemplate
+    ref: lab-devops-dev-triggeretmplate
