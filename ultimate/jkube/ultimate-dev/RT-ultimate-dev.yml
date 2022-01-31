@@ -1,7 +1,7 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: ultimate-dev
   name: ultimate-route
   labels:
     app: ultimate
