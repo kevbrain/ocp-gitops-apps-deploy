@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: first-app-secret-0
+  labels:
+    app: first-app    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 
