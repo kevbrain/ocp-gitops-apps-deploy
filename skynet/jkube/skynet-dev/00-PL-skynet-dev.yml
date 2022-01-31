@@ -1,14 +1,14 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: netscape-pipeline
+  name: skynet-pipeline
   namespace: devops
 spec:
   tasks:
     - name: rollout-deploy
       params:
         - name: SCRIPT
-          value: oc rollout restart deployment/netscape
+          value: oc rollout restart deployment/skynet
         - name: VERSION
           value: latest
       runAfter:
@@ -19,7 +19,7 @@ spec:
     - name: git-clone
       params:
         - name: url
-          value: 'https://github.com/kevbrain/netscape.git'
+          value: 'https://github.com/kevbrain/skynet.git'
         - name: revision
           value: master
         - name: submodules
@@ -29,7 +29,7 @@ spec:
         - name: sslVerify
           value: 'true'
         - name: subdirectory
-          value: /netscape
+          value: /skynet
         - name: deleteExisting
           value: 'true'
         - name: verbose
@@ -54,7 +54,7 @@ spec:
         - name: PROXY_PROTOCOL
           value: http
         - name: CONTEXT_DIR
-          value: netscape/netscape
+          value: skynet/skynet
       runAfter:
         - git-clone
       taskRef:
@@ -76,7 +76,7 @@ spec:
         - name: PROXY_PROTOCOL
           value: http
         - name: CONTEXT_DIR
-          value: netscape/netscape
+          value: skynet/skynet
       runAfter:
         - code-analysis
       taskRef:
@@ -103,7 +103,7 @@ spec:
         - name: PROXY_PROTOCOL
           value: http
         - name: CONTEXT_DIR
-          value: netscape/netscape
+          value: skynet/skynet
       runAfter:
         - compile
       taskRef:

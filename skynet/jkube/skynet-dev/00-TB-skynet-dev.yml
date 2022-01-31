@@ -1,7 +1,7 @@
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
 metadata:
-  name: netscape
+  name: skynet
   namespace: devops
 spec:
   params:

@@ -1,14 +1,14 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  namespace: devops
-  name: netscape-route
+  namespace: lab-devops-dev
+  name: lab-devops-route
   labels:
-    app: netscape
+    app: lab-devops
 spec:
   to:
     kind: Service
-    name: netscape-service
+    name: lab-devops-service
     weight: 256
   port:
     targetPort: 8080

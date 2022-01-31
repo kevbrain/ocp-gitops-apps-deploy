@@ -2,9 +2,9 @@ kind: Secret
 apiVersion: v1
 metadata:
   namespace: devops
-  name: netscape-secret-0
+  name: matrix-secret-0
   labels:
-    app: netscape    
+    app: matrix    
 stringData:  
   actuator.password: password
 type: Opaque

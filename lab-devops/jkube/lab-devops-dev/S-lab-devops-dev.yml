@@ -1,10 +1,10 @@
 kind: Secret
 apiVersion: v1
 metadata:
-  namespace: devops
-  name: netscape-secret-0
+  namespace: lab-devops-dev
+  name: lab-devops-secret-0
   labels:
-    app: netscape    
+    app: lab-devops    
 stringData:  
   actuator.password: password
 type: Opaque

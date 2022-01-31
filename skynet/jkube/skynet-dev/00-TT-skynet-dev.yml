@@ -1,7 +1,7 @@
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerTemplate
 metadata:
-  name: netscape
+  name: skynet
   namespace: devops
 spec:
   params:
@@ -21,13 +21,13 @@ spec:
       generation: 1
     spec:
       pipelineRef:
-        name: netscape-pipeline
+        name: skynet-pipeline
       serviceAccountName: pipeline
       timeout: 1h0m0s
       workspaces:
         - name: source
           persistentVolumeClaim:
-            claimName: netscape-pipeline-claim
+            claimName: skynet-pipeline-claim
         - configMap:
             name: maven-settings-cm
           name: maven-settings

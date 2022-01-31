@@ -1,8 +1,8 @@
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerTemplate
 metadata:
-  name: netscape
-  namespace: devops
+  name: ksc-lab
+  namespace: ksc-lab-dev
 spec:
   params:
   - name: git-repo-url
@@ -17,17 +17,17 @@ spec:
     kind: PipelineRun
     metadata:
       generateName: build-deploy-$(tt.params.git-repo-name)-
-      namespace: devops
+      namespace: ksc-lab-dev
       generation: 1
     spec:
       pipelineRef:
-        name: netscape-pipeline
+        name: ksc-lab-pipeline
       serviceAccountName: pipeline
       timeout: 1h0m0s
       workspaces:
         - name: source
           persistentVolumeClaim:
-            claimName: netscape-pipeline-claim
+            claimName: ksc-lab-pipeline-claim
         - configMap:
             name: maven-settings-cm
           name: maven-settings

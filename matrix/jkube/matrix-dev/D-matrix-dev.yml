@@ -5,19 +5,19 @@ metadata:
   annotations:
     its4u.placeholders/auto: "true"
     reloader.stakater.com/auto: "true"
-  name: netscape
+  name: matrix
   labels:
-    app: netscape
+    app: matrix
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: netscape
+      app: matrix
   template:
     metadata:
-      name: netscape
+      name: matrix
       labels:
-        app: netscape
+        app: matrix
     spec:
       volumes:
         - name: emptydirlogs
@@ -37,40 +37,70 @@ spec:
               port: 8080
               scheme: HTTP
           env:
+            - name: app-limit.memory
+              valueFrom:
+                configMapKeyRef:
+                  name: matrix-cm-0
+                  key: app-limit.memory
             - name: ocp-cluster.registry
               valueFrom:
                 configMapKeyRef:
-                  name: netscape-cm-0
+                  name: matrix-cm-0
                   key: ocp-cluster.registry
+            - name: app-limit.cpu
+              valueFrom:
+                configMapKeyRef:
+                  name: matrix-cm-0
+                  key: app-limit.cpu
             - name: ocp.environment
               valueFrom:
                 configMapKeyRef:
-                  name: netscape-cm-0
+                  name: matrix-cm-0
                   key: ocp.environment
             - name: ocp-namespace
               valueFrom:
                 configMapKeyRef:
-                  name: netscape-cm-0
+                  name: matrix-cm-0
                   key: ocp-namespace
             - name: cluster-suffix
               valueFrom:
                 configMapKeyRef:
-                  name: netscape-cm-0
+                  name: matrix-cm-0
                   key: cluster-suffix
+            - name: app-actuator.port
+              valueFrom:
+                configMapKeyRef:
+                  name: matrix-cm-0
+                  key: app-actuator.port
+            - name: app-request.memory
+              valueFrom:
+                configMapKeyRef:
+                  name: matrix-cm-0
+                  key: app-request.memory
+            - name: app-container.port
+              valueFrom:
+                configMapKeyRef:
+                  name: matrix-cm-0
+                  key: app-container.port
+            - name: app-request.cpu
+              valueFrom:
+                configMapKeyRef:
+                  name: matrix-cm-0
+                  key: app-request.cpu
             - name: ocp.replicas
               valueFrom:
                 configMapKeyRef:
-                  name: netscape-cm-0
+                  name: matrix-cm-0
                   key: ocp.replicas
             - name: app-version
               valueFrom:
                 configMapKeyRef:
-                  name: netscape-cm-0
+                  name: matrix-cm-0
                   key: app-version
             - name: actuator.password
               valueFrom:
                 secretKeyRef:
-                  name: netscape-secret-0
+                  name: matrix-secret-0
                   key: actuator.password
           ports:
             - containerPort: 8080
@@ -81,5 +111,5 @@ spec:
             - name: emptydirlogs
               mountPath: /Logs
           image: >-
-            image-registry.openshift-image-registry.svc.cluster.local:5000/devops/netscape:0.0.1-SNAPSHOT
+            image-registry.openshift-image-registry.svc.cluster.local:5000/devops/matrix:0.0.1-SNAPSHOT
       restartPolicy: Always

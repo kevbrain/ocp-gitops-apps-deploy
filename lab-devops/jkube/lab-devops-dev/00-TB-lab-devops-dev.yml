@@ -1,8 +1,8 @@
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
 metadata:
-  name: netscape
-  namespace: devops
+  name: lab-devops-dev-triggerBinging
+  namespace: lab-devops-dev
 spec:
   params:
     - name: git-repo-url

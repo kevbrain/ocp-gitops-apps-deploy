@@ -2,9 +2,9 @@ kind: Secret
 apiVersion: v1
 metadata:
   namespace: devops
-  name: netscape-secret-0
+  name: skynet-secret-0
   labels:
-    app: netscape    
+    app: skynet    
 stringData:  
   actuator.password: password
 type: Opaque

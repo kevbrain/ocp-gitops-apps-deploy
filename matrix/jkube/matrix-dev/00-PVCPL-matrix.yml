@@ -1,7 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: netscape-pipeline-claim
+  name: matrix-pipeline-claim
   namespace: devops
 spec:
   accessModes:

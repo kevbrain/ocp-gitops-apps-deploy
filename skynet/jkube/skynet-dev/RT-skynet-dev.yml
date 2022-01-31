@@ -2,13 +2,13 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   namespace: devops
-  name: netscape-route
+  name: skynet-route
   labels:
-    app: netscape
+    app: skynet
 spec:
   to:
     kind: Service
-    name: netscape-service
+    name: skynet-service
     weight: 256
   port:
     targetPort: 8080

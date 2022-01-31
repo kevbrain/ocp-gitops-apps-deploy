@@ -1,9 +1,9 @@
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: EventListener
 metadata:
-  name: netscape
-  namespace: devops
+  name: lab-devops-dev-EventListener
+  namespace: lab-devops-dev
 spec:
   serviceAccountName: pipeline
   triggers:
-    - triggerRef: netscape-trigger
+    - triggerRef: lab-devops-dev-trigger

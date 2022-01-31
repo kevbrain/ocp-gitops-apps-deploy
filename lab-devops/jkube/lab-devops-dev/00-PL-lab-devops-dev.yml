@@ -1,14 +1,21 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: netscape-pipeline
-  namespace: devops
+  name: lab-devops-dev-pipeline-build
+  namespace: lab-devops-dev
 spec:
+  params:
+    - name: git-repo-name
+      type: string
+    - name: git-revision
+      type: string
+    - name: git-repo-url
+      type: string
   tasks:
     - name: rollout-deploy
       params:
         - name: SCRIPT
-          value: oc rollout restart deployment/netscape
+          value: oc rollout restart deployment/lab-devops
         - name: VERSION
           value: latest
       runAfter:
@@ -19,17 +26,15 @@ spec:
     - name: git-clone
       params:
         - name: url
-          value: 'https://github.com/kevbrain/netscape.git'
+          value: $(params.git-repo-url)
         - name: revision
-          value: master
+          value: $(params.git-revision)
         - name: submodules
           value: 'true'
         - name: depth
           value: '1'
         - name: sslVerify
           value: 'true'
-        - name: subdirectory
-          value: /netscape
         - name: deleteExisting
           value: 'true'
         - name: verbose
@@ -53,8 +58,6 @@ spec:
             - compile
         - name: PROXY_PROTOCOL
           value: http
-        - name: CONTEXT_DIR
-          value: netscape/netscape
       runAfter:
         - git-clone
       taskRef:
@@ -75,8 +78,6 @@ spec:
             - 'jib:build'
         - name: PROXY_PROTOCOL
           value: http
-        - name: CONTEXT_DIR
-          value: netscape/netscape
       runAfter:
         - code-analysis
       taskRef:
@@ -102,8 +103,6 @@ spec:
             - '-Darguments=-DskipITs'
         - name: PROXY_PROTOCOL
           value: http
-        - name: CONTEXT_DIR
-          value: netscape/netscape
       runAfter:
         - compile
       taskRef:

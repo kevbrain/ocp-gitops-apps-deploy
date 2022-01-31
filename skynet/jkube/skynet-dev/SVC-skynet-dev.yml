@@ -2,9 +2,9 @@ kind: Service
 apiVersion: v1
 metadata:
   namespace: devops
-  name: netscape-service
+  name: skynet-service
   labels:
-    app: netscape
+    app: skynet
 spec:
   ports:
     - name: http
@@ -12,4 +12,4 @@ spec:
       port: 8080
       targetPort: 8080
   selector:
-    app: netscape
+    app: skynet

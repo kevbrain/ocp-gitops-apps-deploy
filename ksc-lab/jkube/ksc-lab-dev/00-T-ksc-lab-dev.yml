@@ -1,11 +1,11 @@
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: Trigger
 metadata:
-  name: netscape-trigger
-  namespace: devops
+  name: ksc-lab-trigger
+  namespace: ksc-lab-dev
 spec:
   serviceAccountName: pipeline
   bindings:
-    - ref: netscape
+    - ref: ksc-lab
   template:
-    ref: netscape
+    ref: ksc-lab

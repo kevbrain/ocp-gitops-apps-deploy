@@ -4,15 +4,15 @@ metadata:
   labels:
     app.kubernetes.io/managed-by: EventListener
     app.kubernetes.io/part-of: Triggers
-    eventlistener: netscape
-  name: el-netscape
+    eventlistener: skynet
+  name: el-skynet
   namespace: devops
 spec:
-  host: el-netscape-devops.apps.ocp-lab.its4u.eu
+  host: el-skynet-devops.apps.ocp-lab.its4u.eu
   port:
     targetPort: http-listener
   to:
     kind: Service
-    name: el-netscape
+    name: el-skynet
     weight: 100
   wildcardPolicy: None

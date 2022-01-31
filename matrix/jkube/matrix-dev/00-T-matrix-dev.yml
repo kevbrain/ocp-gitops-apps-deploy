@@ -1,9 +1,11 @@
 apiVersion: triggers.tekton.dev/v1alpha1
-kind: EventListener
+kind: Trigger
 metadata:
-  name: netscape
+  name: matrix-trigger
   namespace: devops
 spec:
   serviceAccountName: pipeline
-  triggers:
-    - triggerRef: netscape-trigger
+  bindings:
+    - ref: matrix
+  template:
+    ref: matrix
