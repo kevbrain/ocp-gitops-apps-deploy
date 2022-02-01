@@ -1,7 +1,7 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: devops
   name: migrator-route
   labels:
     app: migrator
