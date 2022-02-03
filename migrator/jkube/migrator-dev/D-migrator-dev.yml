@@ -111,5 +111,5 @@ spec:
             - name: emptydirlogs
               mountPath: /Logs
           image: >-
-            image-registry.openshift-image-registry.svc.cluster.local:5000/devops/migrator:0.0.1-SNAPSHOT
+            image-registry.openshift-image-registry.svc.cluster.local:5000/devops/migrator:v2.0-SNAPSHOT
       restartPolicy: Always
