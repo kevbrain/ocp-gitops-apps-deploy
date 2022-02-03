@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: thomson-dev
   name: thomson-service
   labels:
     app: thomson
