@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: samsung-dev
   name: samsung-service
   labels:
     app: samsung
