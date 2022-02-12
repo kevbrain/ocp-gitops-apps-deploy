@@ -111,5 +111,5 @@ spec:
             - name: emptydirlogs
               mountPath: /Logs
           image: >-
-            image-registry.openshift-image-registry.svc.cluster.local:5000/devops/capacity-tool:feature-ocp-0.0.1-SNAPSHOT
+            image-registry.openshift-image-registry.svc.cluster.local:5000/devops/capacity-tool:v6.0
       restartPolicy: Always
