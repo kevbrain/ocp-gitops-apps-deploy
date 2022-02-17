@@ -1,7 +1,7 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: skopeo-dev
   name: skopeo-route
   labels:
     app: skopeo
