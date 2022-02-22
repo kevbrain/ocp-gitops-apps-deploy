@@ -1,7 +1,7 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: ptf-client-api-dev
   name: ptf-client-api-route
   labels:
     app: ptf-client-api
