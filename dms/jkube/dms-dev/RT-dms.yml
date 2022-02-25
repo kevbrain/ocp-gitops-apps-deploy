@@ -1,7 +1,7 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: dms-dev
   name: dms-route
   labels:
     app: dms

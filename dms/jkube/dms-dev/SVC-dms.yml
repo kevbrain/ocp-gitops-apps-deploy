@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: dms-dev
   name: dms-service
   labels:
     app: dms
