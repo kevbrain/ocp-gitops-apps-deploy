@@ -1,7 +1,7 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: erp-api-dev
   name: erp-api-route
   labels:
     app: erp-api
