@@ -34,4 +34,8 @@ data:
   app-version: "0.0.1-SNAPSHOT"
   prometheus.query.maxovertime: "2d"
   prometheus.url: "https://prometheus-k8s-openshift-monitoring.apps.ocp-lab.its4u.eu"
+  project.default.limit.cpu: "500"
+  project.default.limit.memory: "750"
+  project.default.request.cpu: "200"
+  project.default.request.memory: "250"
 ---
