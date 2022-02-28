@@ -10,7 +10,7 @@ data:
   alert.percentage.consumption.resource.threshold: "90"
   app.ocp.instance.name: "lab.its4u"
   app.ocp.console.url: "https://console-openshift-console.apps.ocp-lab.its4u.eu/"
-  app.envs: "dev:1,tst:2,int:2,prd:2"
+  app.envs: "dev:1,tst:2,int:2"
   app.envs.namespace.label: "its4u.com/env"
   app.mail.default.recipient: "kevyn.schrondweiler@its4u.com"
   app.mail.smtp.host: "smtp.host"
