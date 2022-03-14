@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: christopher-secret-0
+  labels:
+    app: christopher    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 
