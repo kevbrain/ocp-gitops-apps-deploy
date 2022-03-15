@@ -1,12 +1,12 @@
 kind: Secret
 apiVersion: v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: dms-dev
   name: dms-secret-0
   labels:
     app: dms    
 stringData:  
-  actuator.password: {{actuator.password}}
+  actuator.password: password
 type: Opaque
 ---
  
