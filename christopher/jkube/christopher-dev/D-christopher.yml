@@ -29,7 +29,7 @@ spec:
               memory: 250Mi
               cpu : 200m
             limits:
-              memory: 750Mi
+              memory: 800Mi
               cpu : 500m
           readinessProbe:
             httpGet:

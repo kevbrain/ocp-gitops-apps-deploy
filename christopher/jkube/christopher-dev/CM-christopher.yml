@@ -9,7 +9,7 @@ data:
   app-actuator.port: "8080"
   app-container.port: "8080"
   app-limit.cpu: "500m"
-  app-limit.memory: "750Mi"
+  app-limit.memory: "800Mi"
   app-request.cpu: "200m"
   app-request.memory: "250Mi"
   app-version: "0.0.1-SNAPSHOT"
