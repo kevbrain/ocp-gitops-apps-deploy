@@ -15,7 +15,7 @@ data:
   app-version: "0.0.1-SNAPSHOT"
   cluster-suffix: "apps.ocp-lab.its4u.eu"
   ocp.environment: "dev"
-  ocp.replicas: "0"
+  ocp.replicas: "1"
   ocp-cluster.registry: "image-registry.openshift-image-registry.svc.cluster.local:5000"
   ocp-namespace: "christopher-dev"
 ---
