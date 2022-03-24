@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: register-api-dev
   name: register-api-service
   labels:
     app: register-api
