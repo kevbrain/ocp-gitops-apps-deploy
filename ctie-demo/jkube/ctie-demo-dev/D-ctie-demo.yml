@@ -110,13 +110,7 @@ spec:
           volumeMounts:
             - name: emptydir-vol-0
               mountPath: /Logs
-          securityContext:
-            runAsUser: 455555
           workingDir: /tmp
           image: >-
             image-registry.openshift-image-registry.svc.cluster.local:5000/ctie-demo-dev/ctie-demo:0.0.1-SNAPSHOT
-      serviceAccount: ctie-demo-sa
-      securityContext:
-        fsGroup: 455555
-        supplementalGroups: [455555]
       restartPolicy: Always
