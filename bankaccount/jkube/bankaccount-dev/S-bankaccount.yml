@@ -1,12 +1,12 @@
 kind: Secret
 apiVersion: v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: bankaccount-dev
   name: bankaccount-secret-0
   labels:
     app: bankaccount    
 stringData:  
-  actuator.password: {{actuator.password}}
+  actuator.password: password
 type: Opaque
 ---
  
