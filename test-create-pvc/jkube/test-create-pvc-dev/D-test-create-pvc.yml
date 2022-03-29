@@ -1,7 +1,7 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: test-create-pvc-dev
   annotations:
     its4u.placeholders/auto: "true"
     reloader.stakater.com/auto: "true"
@@ -9,7 +9,7 @@ metadata:
   labels:
     app: test-create-pvc
 spec:
-  replicas: {{ocp.replicas}}
+  replicas: 1
   selector:
     matchLabels:
       app: test-create-pvc
@@ -29,15 +29,15 @@ spec:
         - name: microservice-pod 
           resources:
             requests:
-              memory: {{app-request.memory}}
-              cpu : {{app-request.cpu}}
+              memory: 250Mi
+              cpu : 200m
             limits:
-              memory: {{app-limit.memory}}
-              cpu : {{app-limit.cpu}}
+              memory: 750Mi
+              cpu : 500m
           readinessProbe:
             httpGet:
               path: actuator/health
-              port: {{app-actuator.port}}
+              port: 8080
               scheme: HTTP
           env:
             - name: app-actuator.port
@@ -106,7 +106,7 @@ spec:
                   name: test-create-pvc-secret-0
                   key: actuator.password
           ports:
-            - containerPort: {{app-container.port}}
+            - containerPort: 8080
               protocol: TCP
               name: http
           imagePullPolicy: Always
@@ -116,5 +116,5 @@ spec:
             - name: pvtest-vol-1
               mountPath: /datas
           image: >-
-            {{ocp-cluster.registry}}/{{ocp-namespace}}/test-create-pvc:{{app-version}}
+            image-registry.openshift-image-registry.svc.cluster.local:5000/test-create-pvc-dev/test-create-pvc:0.0.1-SNAPSHOT
       restartPolicy: Always

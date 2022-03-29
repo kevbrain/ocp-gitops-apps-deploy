@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: test-create-pvc-dev
   name: test-create-pvc-service
   labels:
     app: test-create-pvc
