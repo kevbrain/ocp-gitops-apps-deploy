@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: gitops-importer-secret-0
+  labels:
+    app: gitops-importer    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 
