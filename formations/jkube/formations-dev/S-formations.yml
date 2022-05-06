@@ -1,12 +1,12 @@
 kind: Secret
 apiVersion: v1
 metadata:
-  namespace: {{ocp-namespace}}
+  namespace: formations-dev
   name: formations-secret-0
   labels:
     app: formations    
 stringData:  
-  actuator.password: {{actuator.password}}
+  actuator.password: password
 type: Opaque
 ---
  
