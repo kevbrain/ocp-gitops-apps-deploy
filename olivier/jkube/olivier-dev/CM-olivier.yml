@@ -18,4 +18,5 @@ data:
   app-request.cpu: "200m"
   ocp.replicas: "1"
   app-version: "0.0.1-SNAPSHOT"
+  test-ksc: "hello"
 ---
