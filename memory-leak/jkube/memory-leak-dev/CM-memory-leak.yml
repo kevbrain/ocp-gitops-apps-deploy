@@ -6,14 +6,14 @@ metadata:
   labels:
     app: memory-leak
 data: 
-  app-limit.memory: "750Mi"
+  app-limit.memory: "250Mi"
   ocp-cluster.registry: "image-registry.openshift-image-registry.svc.cluster.local:5000"
   app-limit.cpu: "500m"
   ocp.environment: "dev"
   ocp-namespace: "memory-leak-dev"
   cluster-suffix: "apps.ocp-lab.its4u.eu"
   app-actuator.port: "8080"
-  app-request.memory: "250Mi"
+  app-request.memory: "100Mi"
   app-container.port: "8080"
   app-request.cpu: "200m"
   ocp.replicas: "1"
