@@ -6,7 +6,7 @@ metadata:
   labels:
     app: memory-leak
 data: 
-  app-limit.memory: "250Mi"
+  app-limit.memory: "300Mi"
   ocp-cluster.registry: "image-registry.openshift-image-registry.svc.cluster.local:5000"
   app-limit.cpu: "500m"
   ocp.environment: "dev"
