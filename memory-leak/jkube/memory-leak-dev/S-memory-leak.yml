@@ -1,10 +1,10 @@
 kind: Secret
 apiVersion: v1
 metadata:
-  namespace: ctie-dev
-  name: ctie-secret-0
+  namespace: memory-leak-dev
+  name: memory-leak-secret-0
   labels:
-    app: ctie    
+    app: memory-leak    
 stringData:  
   actuator.password: password
 type: Opaque

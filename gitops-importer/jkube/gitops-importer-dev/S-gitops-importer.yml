@@ -1,10 +1,10 @@
 kind: Secret
 apiVersion: v1
 metadata:
-  namespace: erp-api-dev
-  name: erp-api-secret-0
+  namespace: gitops-importer-dev
+  name: gitops-importer-secret-0
   labels:
-    app: erp-api    
+    app: gitops-importer    
 stringData:  
   actuator.password: password
 type: Opaque

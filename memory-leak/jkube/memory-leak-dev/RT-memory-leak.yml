@@ -1,14 +1,14 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  namespace: ptf-client-api-dev
-  name: ptf-client-api-route
+  namespace: memory-leak-dev
+  name: memory-leak-route
   labels:
-    app: ptf-client-api
+    app: memory-leak
 spec:
   to:
     kind: Service
-    name: ptf-client-api-service
+    name: memory-leak-service
     weight: 256
   port:
     targetPort: 8080

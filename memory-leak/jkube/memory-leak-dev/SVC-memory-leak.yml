@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  namespace: {{ocp-namespace}}
-  name: supplier-api-service
+  namespace: memory-leak-dev
+  name: memory-leak-service
   labels:
-    app: supplier-api
+    app: memory-leak
 spec:
   ports:
     - name: http
@@ -12,4 +12,4 @@ spec:
       port: 8080
       targetPort: 8080
   selector:
-    app: supplier-api
+    app: memory-leak
