@@ -103,20 +103,20 @@ spec:
                   name: bootstraper-cm-0
                   key: argo.user
             - name: argo.repo.gitops
-               valueFrom:
-                 configMapKeyRef:
-                   name: bootstraper-cm-0
-                   key: argo.repo.gitops
+              valueFrom:
+                configMapKeyRef:
+                  name: bootstraper-cm-0
+                  key: argo.repo.gitops
             - name: argo.repo.gitapps
-               valueFrom:
-                 configMapKeyRef:
-                   name: bootstraper-cm-0
-                   key: argo.repo.gitapps
+              valueFrom:
+                configMapKeyRef:
+                  name: bootstraper-cm-0
+                  key: argo.repo.gitapps
             - name: argo.project
-               valueFrom:
-                 configMapKeyRef:
-                   name: bootstraper-cm-0
-                   key: argo.project
+              valueFrom:
+                configMapKeyRef:
+                  name: bootstraper-cm-0
+                  key: argo.project
             - name: git.user
               valueFrom:
                 configMapKeyRef:
