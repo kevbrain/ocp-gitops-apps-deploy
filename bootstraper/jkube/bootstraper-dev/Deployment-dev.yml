@@ -112,7 +112,7 @@ spec:
                 configMapKeyRef:
                   name: bootstraper-cm-0
                   key: argo.repo.gitapps
-            - name: argo.project
+            - name: argo.projet
               valueFrom:
                 configMapKeyRef:
                   name: bootstraper-cm-0
