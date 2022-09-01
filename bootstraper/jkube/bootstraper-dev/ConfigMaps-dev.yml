@@ -6,7 +6,7 @@ metadata:
   labels:
     app: bootstraper
 data: 
-  cluster-suffix: "apps.ocp-lab.its4u.eu"
+  cluster-suffix: "apps.ocp-lab2.its4u.eu"
   ocp.environment: "dev"
   ocp.replicas: "1"
   ocp-cluster.registry: "image-registry.openshift-image-registry.svc.cluster.local:5000"
@@ -14,14 +14,14 @@ data:
   path.resource: "/app/resources/template/META-INF/resources"
   path.template: "/app/resources/template/"
   path.workspace: "/tmp"
-  placeholdermanager.url: "https://placeholdermanager-route-placeholdermanager-dev.apps.ocp-lab.its4u.eu/"
+  placeholdermanager.url: "https://placeholdermanager-route-placeholdermanager-dev.apps.ocp-lab2.its4u.eu/"
   server.port: '8080'
   spring.application.name: "OCP - GitOps Application Bootstrapper v3.0"
   argo.user: "admin"
   git.user: "openshift"
-  argo.server: "https://openshift-gitops-server-openshift-gitops.apps.ocp-lab.its4u.eu"
+  argo.server: "https://openshift-gitops-server-openshift-gitops.apps.ocp-lab2.its4u.eu"
   codeready.user: "kevyn"
   codeready.client.id: "postman"
-  codeready.access.token.url: "https://keycloak-openshift-workspaces.apps.ocp-lab.its4u.eu/auth/realms/codeready/protocol/openid-connect/token"
-  codeready.workspace.url: "https://codeready-openshift-workspaces.apps.ocp-lab.its4u.eu"
+  codeready.access.token.url: "https://keycloak-openshift-workspaces.apps.ocp-lab2.its4u.eu/auth/realms/codeready/protocol/openid-connect/token"
+  codeready.workspace.url: "https://codeready-openshift-workspaces.apps.ocp-lab2.its4u.eu"
 ---
